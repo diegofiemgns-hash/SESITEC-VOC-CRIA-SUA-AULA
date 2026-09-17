@@ -1,0 +1,203 @@
+import { AteEquipment, AteClassSchedule, AteNotice } from '../types';
+
+export const INITIAL_ATE_EQUIPMENT: AteEquipment[] = [
+  {
+    id: 'eq-3d-1',
+    name: 'Impressoras 3D MakerBot Sketch & GTMax Core',
+    techId: 'impressora-3d',
+    category: 'Prototipagem & Maker',
+    totalCount: 4,
+    availableCount: 3,
+    inUseCount: 1,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Laboratório de Educação Tecnológica (Sala Maker)',
+    consumables: 'Filamento PLA Azul (800g), Branco (1.1kg), Vermelho (500g)',
+    lastCheckDate: 'Hoje, 08:15',
+    notes: 'Bico extrusor de 0.4mm calibrado e mesa nivelada para peças didáticas.'
+  },
+  {
+    id: 'eq-labdisc-1',
+    name: 'Laboratórios Portáteis LabDisc (Biochem & Gensci)',
+    techId: 'labdisc',
+    category: 'Ciências & Sensores Digitais',
+    totalCount: 12,
+    availableCount: 10,
+    inUseCount: 2,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Laboratório de Ciências / Bancada 2',
+    batteryLevel: 94,
+    consumables: 'Solução tampão de pH 4.0 e 7.0 abastecidas para calibração.',
+    lastCheckDate: 'Ontem, 16:30',
+    notes: 'Eletrodos de pH lavados com água destilada e prontos para aulas de água.'
+  },
+  {
+    id: 'eq-vr-1',
+    name: 'Óculos de Realidade Virtual (VR) com Smartphones',
+    techId: 'vr-oculos',
+    category: 'Imersão 360°',
+    totalCount: 8,
+    availableCount: 8,
+    inUseCount: 0,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Armário Móvel de Tecnologias - Gaveta 01',
+    batteryLevel: 100,
+    consumables: 'Lenços para higienização óptica disponíveis.',
+    lastCheckDate: 'Hoje, 07:45',
+    notes: 'Smartphones pareados na rede Wi-Fi SESI_MAKER_5G com aplicativo YouTube Cardboard configurado.'
+  },
+  {
+    id: 'eq-estudio-1',
+    name: 'Estúdio Audiovisual: Softbox, Chroma Key & Lapelas',
+    techId: 'estudio',
+    category: 'Audiovisual & Mídia',
+    totalCount: 2,
+    availableCount: 2,
+    inUseCount: 0,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Sala Multimídia / Estúdio de Gravação',
+    consumables: 'Pilhas reservas AAA para microfones sem fio.',
+    lastCheckDate: 'Hoje, 09:00',
+    notes: 'Fundo verde Chroma Key passado e esticado; iluminação balanceada.'
+  },
+  {
+    id: 'eq-tablets-1',
+    name: 'Carrinho de Tablets Educacionais SESI',
+    techId: 'tablets',
+    category: 'Dispositivos Móveis',
+    totalCount: 32,
+    availableCount: 28,
+    inUseCount: 4,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Carrinho de Recarga Inteligente - Sala 104',
+    batteryLevel: 98,
+    consumables: 'Canetas Stylus capacitivas testadas.',
+    lastCheckDate: 'Hoje, 08:00',
+    notes: 'Apps Tinkercad, PhET e Microsoft Forms atualizados em todos os aparelhos.'
+  },
+  {
+    id: 'eq-cobot-1',
+    name: 'Braço Robótico Colaborativo Universal Robots (UR)',
+    techId: 'braco-robotico',
+    category: 'Automação & Robótica Industrial',
+    totalCount: 2,
+    availableCount: 2,
+    inUseCount: 0,
+    maintenanceCount: 0,
+    status: 'disponivel',
+    location: 'Bancada Indústria 4.0 - Laboratório de Robótica',
+    consumables: 'Garras pneumáticas e adaptadores de vácuo higienizados.',
+    lastCheckDate: 'Anteontem, 14:00',
+    notes: 'Freios e botão de parada de emergência tipo cogumelo testados com sucesso.'
+  },
+  {
+    id: 'eq-lego-1',
+    name: 'Kits LEGO Education SPIKE Prime & Essential',
+    techId: 'lego-spike',
+    category: 'STEAM & Montagem',
+    totalCount: 16,
+    availableCount: 14,
+    inUseCount: 0,
+    maintenanceCount: 2,
+    status: 'atencao',
+    location: 'Estante Maker / Prateleira 3',
+    batteryLevel: 85,
+    consumables: 'Peças de reposição conferidas nas bandejas organizadoras.',
+    lastCheckDate: 'Ontem, 17:00',
+    notes: '2 kits em conferência de peças miúdas pelo ATE antes da liberação.'
+  }
+];
+
+export const INITIAL_ATE_SCHEDULES: AteClassSchedule[] = [
+  {
+    id: 'sch-1',
+    teacherName: 'Prof. Marcos Silva',
+    teacherEmail: 'marcos.silva@sesi.org.br',
+    discipline: 'Arte',
+    className: '8º Ano B - Fund. II',
+    stage: 'fundamental2',
+    proposalTitle: 'Máscaras Africanas: do Tradicional ao Contemporâneo',
+    techId: 'impressora-3d',
+    techName: 'Impressora 3D',
+    requestedDate: 'Hoje, 10:15 (Aula 3 e 4)',
+    requestedPeriod: 'matutino',
+    quantityRequested: 2,
+    status: 'preparado',
+    ateNotes: 'Mesa nivelada com spray fixador e filamento PLA marrom/preto carregado. Sala Maker reservada.',
+    createdAt: 'Ontem, 14:20'
+  },
+  {
+    id: 'sch-2',
+    teacherName: 'Profa. Juliana Santos',
+    teacherEmail: 'juliana.santos@sesi.org.br',
+    discipline: 'Ciências',
+    className: '5º Ano A - Fund. I',
+    stage: 'fundamental1',
+    proposalTitle: 'Analisando a Água da Torneira: pH com LabDisc',
+    techId: 'labdisc',
+    techName: 'Laboratório Portátil LabDisc',
+    requestedDate: 'Amanhã, 08:00 (Aula 1 e 2)',
+    requestedPeriod: 'matutino',
+    quantityRequested: 6,
+    status: 'pendente',
+    ateNotes: 'Separar béqueres plásticos e lavar os eletrodos de pH na bancada de apoio.',
+    createdAt: 'Hoje, 07:30'
+  },
+  {
+    id: 'sch-3',
+    teacherName: 'Prof. Carlos Eduardo',
+    teacherEmail: 'carlos.eduardo@sesi.org.br',
+    discipline: 'Biologia',
+    className: '1ª Série A - Ensino Médio',
+    stage: 'medio',
+    proposalTitle: 'A Evolução dos Vertebrados na Palma das Mãos (Embriões 3D)',
+    techId: 'impressora-3d',
+    techName: 'Impressora 3D',
+    requestedDate: 'Sexta-feira, 13:30',
+    requestedPeriod: 'vespertino',
+    quantityRequested: 1,
+    status: 'pendente',
+    ateNotes: 'Fatiar modelos STL dos 5 embriões no software MakerBot Print antes da aula.',
+    createdAt: 'Hoje, 09:10'
+  },
+  {
+    id: 'sch-4',
+    teacherName: 'Profa. Beatriz Mendes',
+    teacherEmail: 'beatriz.mendes@sesi.org.br',
+    discipline: 'Língua Portuguesa',
+    className: '1º Ano B - Fund. I',
+    stage: 'fundamental1',
+    proposalTitle: 'Cantando e Brincando: Cantigas de Roda em Chroma Key',
+    techId: 'estudio',
+    techName: 'Estúdio de Gravação & Chroma Key',
+    requestedDate: 'Segunda-feira, 09:30',
+    requestedPeriod: 'matutino',
+    quantityRequested: 1,
+    status: 'pendente',
+    ateNotes: 'Testar iluminação e posicionar marcas no chão para o posicionamento das crianças.',
+    createdAt: 'Hoje, 10:00'
+  }
+];
+
+export const INITIAL_ATE_NOTICES: AteNotice[] = [
+  {
+    id: 'not-1',
+    title: 'Chegada de Novo Lote de Filamentos PLA',
+    message: 'Recebemos na Sala Maker novas bobinas de filamento PLA em cores vibrantes (azul, amarelo, vermelho e verde) para as impressoras 3D. Professores podem agendar projetos de prototipagem!',
+    date: 'Hoje',
+    priority: 'normal',
+    author: 'Equipe ATE - Assistência de Tecnologia Educacional'
+  },
+  {
+    id: 'not-2',
+    title: 'Calibração dos Sensores de pH do LabDisc Concluída',
+    message: 'Todos os 12 aparelhos LabDisc Biochem tiveram os eletrodos de pH calibrados com solução tampão. Prontos para as aulas de Ciências e Química.',
+    date: 'Ontem',
+    priority: 'importante',
+    author: 'Equipe ATE'
+  }
+];

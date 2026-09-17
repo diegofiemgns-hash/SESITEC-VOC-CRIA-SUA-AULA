@@ -1,0 +1,6 @@
+{
+  "name": "SESI TEC — Sua aula, seu jeito",
+  "description": "Plataforma pedagógica gamificada e adaptativa para integração de tecnologias educacionais no SESI para todas as etapas: Educação Infantil, Ensino Fundamental, Ensino Médio e EJA/Técnico.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
